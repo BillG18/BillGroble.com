@@ -1,1 +1,23 @@
 <p>PROJECTS</p>
+<div class="project">
+    <div class="extinguish-logo">
+        <img src=<%= asset_path('extinguish_logo.png') %> alt="extinguish-logo">
+    </div>
+    <div class="extinguish-background">
+    </div>
+</div>
+<div class="project">
+    <div class="snap-match-logo">
+        <img src=<%= asset_path('snap_logo.png') %> alt="extinguish-logo" class="logo1">
+    </div>
+    <div class="snap-match-background">
+    </div>
+</div>
+
+
+<script>
+$(".project").click(function () {
+    $(this.children[0]).toggleClass('minimize');
+    $(this.children[1]).toggleClass('maximize');
+});
+</script>

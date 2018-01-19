@@ -1,0 +1,287 @@
+@import "variables";
+
+.heading-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#extinguish-background {
+  background-image: asset-url("extinguish_icon.png");
+  background-color: $extinguish-brand-primary;
+  background-size: 50px;
+  
+  box-shadow: inset 0 0 10px #000000;
+  
+  visibility: hidden;
+  
+  transition: all 1s, visibility 0s;
+  animation: down-right-diagnol 5s linear normal infinite;
+    
+  width: 35vw;
+  height: 20vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  //z-index: -1;
+}
+#extinguish-background.visible {
+  visibility: visible;
+}
+// #extinguish-background.visible.fullscreen {
+//   width: 100vh;
+//   height: 100vh;
+// }
+
+#snap-background {
+  background-image: asset-url("snap_icon.png");
+  background-color: $snap-brand-primary;
+  background-size: 75px;
+
+  
+  box-shadow: inset 0 0 10px #000000;
+  
+  visibility: hidden;
+  
+  transition: all 1s, visibility 0s;
+  animation: down-left-diagnol 5s linear normal infinite;
+    
+  width: 35vw;
+  height: 20vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  //z-index: -1;
+}
+#snap-background.visible {
+  visibility: visible;
+}
+
+#business-card {
+    background-color: transparent;
+    color: transparent;
+    pointer-events: none;
+    
+    //box-sizing: border-box;
+    
+    //z-index: 2;
+    
+    width: 35vw;
+    height: $card-size;
+    // padding: 40vh auto;
+    
+    position: absolute;
+    top: -$corner-size;
+    bottom: -$corner-size;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    transition: all 1s, transform-origin 1ms;
+    // transform-origin: right center; 
+    
+    animation: fade-in 0.5s ease-in-out 2s;
+    animation-fill-mode: forwards;
+    // border-top: 1px solid $card-color;
+    // border-bottom: 1px solid $card-color;
+    // , shadow .25s 2.5s;
+    &:before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: -$corner-size;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+    border-radius: 0 0 $card-radius 0; border-width: $corner-size $corner-size 0 $corner-size;
+    transform: rotateX(180deg);
+    animation: fade-in-corner 0.5s ease-in-out 2s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    }
+    &:after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -$corner-size;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+    border-radius: 0 0 $card-radius 0; border-width: $corner-size $corner-size 0 $corner-size;
+    animation: fade-in-corner 0.5s ease-in-out 2s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    // transition: all 2s linear;
+    // cursor: pointer;
+    // content: '';
+    // position: absolute;
+    // bottom: -$corner-size;
+    // width: $corner-size; height: $corner-size;
+    // left: 0;
+    // border-radius: 0 $card-radius 0 0;
+    // background-image: linear-gradient(45deg,transparent 0%,red 0%);
+    // //box-shadow: 1px -1px 1px rgba(0,0,0,.15);
+    }
+}
+
+#business-card:hover:after {
+  //background-image: linear-gradient(45deg,transparent 50%,red 100%);
+}
+#business-card:hover {
+    // transform: scale(1.1);
+    // box-shadow: 2.5px 2.5px 1px rgba(0,0,0,0.25);
+}
+#business-card::before {
+    
+  // FOLD
+}
+#business-card::after {
+    
+}
+#business-card.exit-right {
+  //transform: rotateY(90deg);
+  transform: translate(4vw, 4vw) rotate3d(-1, 1, 0, 90deg);
+}
+#business-card.exit-left {
+  //transform: rotateY(90deg);
+  transform: translate(-4vw, 4vw) rotate3d(1, 1, 0, 90deg);
+}
+  // content: "";
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // border-width: 0 16px 16px 0;
+  // border-style: solid;
+  // border-color: $card-accent $main-background-color;
+
+$corner-page-size: calc(#{$corner-size} / 2);
+
+@keyframes fade-in-corner-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.corner {
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  background-color: transparent;
+  opacity: 0;
+  position: absolute;
+  border-top: $corner-page-size solid transparent;
+  border-right: $corner-page-size solid transparent;
+  border-bottom: $corner-page-size solid $card-color;
+  border-left: $corner-page-size solid $card-color;
+  // border-color: transparent;
+  pointer-events: auto;
+  animation: fade-in-corner-page 0.5s ease-in-out 2s;
+  animation-fill-mode: forwards;
+  transition: all 1s;
+  
+  z-index: 2;
+}
+#top-left.corner {
+  top: -$corner-size;
+  left: 0;
+  transform: rotateZ(90deg);
+}
+#top-right.corner {
+  top: -$corner-size;
+  right: 0;
+  transform: rotateZ(180deg);
+}
+#bottom-left.corner {
+  bottom: -$corner-size;
+  left: 0;
+}
+#bottom-right.corner {
+  bottom: -$corner-size;
+  right: 0;
+  transform: rotateZ(270deg);
+}
+#top-left:hover,
+#top-right:hover,
+#bottom-left:hover,
+#bottom-right:hover {
+  border-bottom-color: $card-accent;
+  border-left-color: $card-accent;
+} 
+#top-left:hover {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+#top-right:hover {
+  transform: rotate3d(-1, 1, 0, 180deg);
+}
+#bottom-left:hover {
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+#bottom-right:hover {
+  transform: rotate3d(-1, 0, 0, 180deg);
+}
+// #top-left:hover + #extinguish-background { 
+//   visibility: visible;
+// }
+#card-content {
+    // padding: 2rem;
+    margin: auto;
+    text-align: center;
+}
+
+.l1,.l2,.l3,.l4 {
+  position: absolute;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+  z-index: 5;
+
+  -webkit-animation-iteration-count:1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+}
+
+
+.l1 {
+  left: 0;
+  bottom: -$corner-size;
+  height: $card-height;
+  width: 3px;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: l1;
+  -webkit-animation-delay: 0s;
+}
+
+.l2 {
+  top: -$corner-size;;
+  left: 0;
+  width: 35vw;
+  height: 3px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: l2;
+  -webkit-animation-delay: .5s;
+}
+
+.l3 {
+  right: 0;
+  top: -$corner-size;;
+  height: $card-height;
+  width: 3px;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: l3;
+  -webkit-animation-delay: 1s;
+}
+
+.l4 {
+  bottom: -$corner-size;
+  right: 0;
+  width: 35vw;
+  height: 3px;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: l4;
+  -webkit-animation-delay: 1.5s;
+}

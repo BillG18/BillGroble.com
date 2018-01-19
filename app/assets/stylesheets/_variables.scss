@@ -2,4 +2,20 @@ $main-background-color: #E6E8E6  !default;
 $background-color: #3F3F37 !default;
 $brand-primary: #FF6700  !default;
 $brand-accent: #FBBA72 !default;
-$light-gray: #CED0CE !default;
+$light-grey: #CED0CE !default;
+
+//CARD
+//colors
+$card-color: #FAFAFA !default;
+$card-accent: #BCBEBC !default; //#E4E4E4
+//dimensions
+$corner-size: 5vw !default;
+$card-height: 20vw !default;
+$card-size: calc(#{$card-height} - (2 * #{$corner-size})) !default;
+$card-radius: 0 !default;
+
+//EXTINGUISH
+$extinguish-brand-primary: #9F7CB1 !default;
+$extinguish-brand-accent: #18191D !default;
+//SNAP+MATCH
+$snap-brand-primary: #00d8ff !default;
