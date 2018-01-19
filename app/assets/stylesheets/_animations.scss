@@ -99,11 +99,17 @@
 @keyframes fade-in {
     0% {
         background-color: transparent;
-        color: transparent;
     }
     100% {
         background-color: $card-color;
-        color: black;
+    }
+}
+@keyframes fade-in-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 @keyframes fade-in-corner {
