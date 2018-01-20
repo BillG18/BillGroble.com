@@ -4,13 +4,20 @@
     <div id="card-container">
         <div id="extinguish-background"></div>
         <div id="snap-background"></div>
+        <div id="bill-background"></div>
+        <div id="shadow"></div>
         <div id="business-card">
             <div id="card-content">
-                <h2>Billy Groble</h2>
-                <h3>Software Developer</h3>
+                <div id="logo"><img src=<%= asset_path('square_logo.png') %> alt="logo"></div>
+                <h2 id="name">Billy Groble</h2>
+                <h3 id="title">Software Developer</h3>
+                <br />
                 <p id="email">bill.groble@gmail.com</p>
+                <br />
+                <p id="website">billgroble.com</p>
                 <div id="contact"><%= render 'contact' %></div>
-                <!--<p>(856) 938-6921</p>-->
+                <div id="bio"><%= render 'intro' %></div>
+                <div id="experience"><%= render 'experience' %></div>
             </div>
             
             <span class="l1"></span>
@@ -24,17 +31,23 @@
             <div class="corner" id="bottom-right"></div>
             
         </div>
-        <div id="shadow"></div>
     </div>
 </div>
 <script>
 $("#top-left").mouseenter(function(){
     $("#snap-background").removeClass("visible");
+    $("#bill-background").removeClass("visible");
     $("#extinguish-background").addClass("visible");
 });
 $("#top-right").mouseenter(function(){
     $("#extinguish-background").removeClass("visible");
+    $("#bill-background").removeClass("visible");
     $("#snap-background").addClass("visible");
+});
+$("#bottom-left").mouseenter(function(){
+    $("#snap-background").removeClass("visible");
+    $("#extinguish-background").removeClass("visible");
+    $("#bill-background").addClass("visible");
 });
 
 $("#top-left").click(function(){
@@ -65,11 +78,26 @@ $("#snap-background").click(function(){
     }, 1000);
 });
 
+$("#bottom-left").click(function(){
+    $("#business-card").css("transform-origin", "right top");
+    $("#business-card").addClass("exit-right-up");
+    setTimeout(function() {
+        $("#bill-background.visible").addClass("fullscreen");
+    }, 1000);
+});
+$("#bill-background").click(function(){
+    $("#bill-background.visible").removeClass("fullscreen");
+    setTimeout(function() {
+        $("#business-card").removeClass("exit-right-up");
+    }, 1000);
+});
+
 
 $("#email").click(function(){
     $("#business-card").css("transform-origin", "initial");
     $("#snap-background").removeClass("visible");
     $("#extinguish-background").removeClass("visible");
+    $("#bill-background").removeClass("visible");
     $("#business-card").addClass("flipY");
     $("#contact").addClass("visible");
     setTimeout(function() {
@@ -83,6 +111,48 @@ $("#contact").click(function(){
     setTimeout(function() {
         $("#business-card").removeClass("flipY");
         $("#contact").removeClass("visible");
+    }, 1000);
+});
+
+$("#name").click(function(){
+    $("#business-card").css("transform-origin", "initial");
+    $("#snap-background").removeClass("visible");
+    $("#extinguish-background").removeClass("visible");
+    $("#bill-background").removeClass("visible");
+    $("#business-card").addClass("flipX-up");
+    $("#bio").addClass("visible");
+    setTimeout(function() {
+        $("#business-card").addClass("expanded");
+        $("#shadow").addClass("expanded")
+    }, 1000);
+});
+$("#bio").click(function(){
+    $("#business-card").removeClass("expanded");
+    $("#shadow").removeClass("expanded")
+    setTimeout(function() {
+        $("#business-card").removeClass("flipX-up");
+        $("#bio").removeClass("visible");
+    }, 1000);
+});
+
+$("#title").click(function(){
+    $("#business-card").css("transform-origin", "initial");
+    $("#snap-background").removeClass("visible");
+    $("#extinguish-background").removeClass("visible");
+    $("#bill-background").removeClass("visible");
+    $("#business-card").addClass("flipX-up");
+    $("#experience").addClass("visible");
+    setTimeout(function() {
+        $("#business-card").addClass("expanded");
+        $("#shadow").addClass("expanded")
+    }, 1000);
+});
+$("#experience").click(function(){
+    $("#business-card").removeClass("expanded");
+    $("#shadow").removeClass("expanded")
+    setTimeout(function() {
+        $("#business-card").removeClass("flipX-up");
+        $("#experience").removeClass("visible");
     }, 1000);
 });
 </script>

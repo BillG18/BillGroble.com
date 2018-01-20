@@ -43,6 +43,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Generates favicon based on main icon image
+  gem 'rails_real_favicon'
 end
 
 group :test do
