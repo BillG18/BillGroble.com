@@ -49,6 +49,14 @@
       background-position: -300px 300px
   }
 }
+@keyframes up-right-diagnol {
+  0%{
+      background-position: 0 0;
+  }
+  100%{
+      background-position: 300px -300px
+  }
+}
 
 @keyframes right-scroll {
   0%{

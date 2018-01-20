@@ -15,3 +15,10 @@ body {
 #heading.content-section {
     // background-color: red;
 }
+::selection {
+  background: $highlight-color; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: $highlight-color; /* Gecko Browsers */
+}
