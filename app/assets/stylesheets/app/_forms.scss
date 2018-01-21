@@ -46,7 +46,7 @@ input, textarea {
     margin: 0.25rem;
     transition: all 0.5s;
     border: 1px solid;
-    // border-radius: 0 10px 0 10px;
+    border-radius: 0 5px 0 5px;
     &:focus {
         // box-sizing: border-box;
         border: 1px solid;
@@ -88,7 +88,7 @@ input[type=button], input[type=submit], input[type=reset] {
     // margin: 4px 2px;
     cursor: pointer;
     width: 25%;
-    border-radius: 0 10px 0 10px;
+    // border-radius: 0 5px 0 5px;
 
 }
 
