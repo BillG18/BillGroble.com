@@ -79,20 +79,18 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   
-  # config.action_mailer.perform_caching = false
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
 
 
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  # address: 'smtp.gmail.com',
-  # port: 587,
-  # domain: 'gmail.com',
-  # user_name: 'extinguishcontact@gmail.com',
-  # password: 'socialsupportnetwork',
-  # authentication: 'plain',
-  # enable_starttls_auto: true 
-  # }
-  # config.action_mailer.default_url_options = { :host => "https://extinguish.io" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandboxa4b150b113c0497eb214478e1841a302.mailgun.org",
+    :user_name => "postmaster@sandboxa4b150b113c0497eb214478e1841a302.mailgun.org",
+    :password => "mailtime"
+  }
 end
