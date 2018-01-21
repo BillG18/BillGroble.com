@@ -5,8 +5,9 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(params[:contact])
-    @contact.request = request
-    if @contact.deliver
+    # @contact.request = request
+    # if @contact.deliver
+    if ContactMailer.contact_email(@contact).deliver
       flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
         respond_to do |format|
           format.js
