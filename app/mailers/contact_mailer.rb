@@ -9,7 +9,7 @@ class ContactMailer < ApplicationMailer
   
   def contact_email(content)
     @greeting = "Hi"
-    @content = content
+    @email = content
     mail to: "bill.groble@gmail.com", subject: "Success! You did it."
   end
   
