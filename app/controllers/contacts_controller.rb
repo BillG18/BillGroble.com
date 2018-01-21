@@ -8,13 +8,11 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
-    #   render to_partial_path: :new
-    respond_to do |format|
-        format.js
-    end
+        respond_to do |format|
+          format.js
+        end
     else
       flash.now[:error] = 'Cannot send message.'
-    #   render :new
     end
   end
 end
