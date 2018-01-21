@@ -1,0 +1,20 @@
+$("#contact-form").addClass("up");
+$("#sent").addClass("up");
+setTimeout(function() {
+    $("#contact-form").html("<%= escape_javascript(render template: "contacts/new") %>");
+}, 1000);
+
+setTimeout(function(){
+    $("#business-card").removeClass("expanded");
+    $("#shadow").removeClass("expanded")
+    $("#contact").removeClass("visible");
+    setTimeout(function() {
+        $("#business-card").removeClass("flipY");
+    }, 1000);
+}, 1000);
+
+setTimeout(function(){
+    $("#contact-form").removeClass("up");
+    $("#sent").removeClass("up");
+}, 5000);
+

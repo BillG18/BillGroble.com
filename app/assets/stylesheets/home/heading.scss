@@ -231,6 +231,10 @@
   color: $brand-primary;
   cursor: pointer;
 }
+#website:hover {
+  animation: swing 1s;
+  cursor: not-allowed;
+}
 
 #business-card.flipY {
   transform: rotateY(180deg);
@@ -391,7 +395,7 @@ $soearly: calc(2 * #{$corner-page-size});
   left: 0;
   right: 0;
   margin: auto;
-  
+  overflow: hidden;
   transform: rotateY(180deg);
   visibility: hidden;
   margin: auto;
@@ -403,6 +407,20 @@ $soearly: calc(2 * #{$corner-page-size});
 #contact.visible {
   visibility: visible;
   cursor: pointer;
+}
+#contact-form {
+  transition: all 1s;
+}
+#contact-form.up {
+  transform: translateY(-$card-height);
+}
+#sent {
+  transition: all 1s;
+  transform: translateY($card-height);
+}
+// $half-card-height: calc(#{$card-height} / 2);
+#sent.up {
+  transform: translateY(-10vw);
 }
 
 #bio {
