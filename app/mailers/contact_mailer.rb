@@ -8,9 +8,8 @@ class ContactMailer < ApplicationMailer
   default from: "me@sandboxa4b150b113c0497eb214478e1841a302.mailgun.org.com"
   
   def contact_email(content)
-    @greeting = "Hi"
     @email = content
-    mail to: "bill.groble@gmail.com", subject: "Success! You did it."
+    mail to: "bill.groble@gmail.com", subject: "New Message From #{@email.name.capitalize}"
   end
   
 end
