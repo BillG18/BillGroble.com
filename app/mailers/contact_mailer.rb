@@ -9,7 +9,7 @@ class ContactMailer < ApplicationMailer
   
   def contact_email(content)
     @email = content
-    mail to: "bill.groble@gmail.com", subject: "New Message From #{@email.name.capitalize}"
+    mail to: "bill.groble@gmail.com", subject: "New Message From #{@email.name.capitalize} (#{@email.email})"
   end
   
 end
