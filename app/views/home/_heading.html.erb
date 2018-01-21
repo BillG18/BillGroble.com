@@ -13,9 +13,11 @@
                 <h3 id="title">Software Developer</h3>
                 <br />
                 <p id="email">bill.groble@gmail.com</p>
-                <br />
                 <p id="website">billgroble.com</p>
-                <div id="contact"><%= render 'contact' %></div>
+                <div id="contact"><div id="contact-form"><%= render template: 'contacts/new' %></div>
+                <div id="sent">
+                    <p>Thanks for your message!</p>
+                    </div></div>
                 <div id="bio"><%= render 'intro' %></div>
                 <div id="experience"><%= render 'experience' %></div>
             </div>
@@ -103,14 +105,6 @@ $("#email").click(function(){
     setTimeout(function() {
         $("#business-card").addClass("expanded");
         $("#shadow").addClass("expanded")
-    }, 1000);
-});
-$("#contact").click(function(){
-    $("#business-card").removeClass("expanded");
-    $("#shadow").removeClass("expanded")
-    setTimeout(function() {
-        $("#business-card").removeClass("flipY");
-        $("#contact").removeClass("visible");
     }, 1000);
 });
 

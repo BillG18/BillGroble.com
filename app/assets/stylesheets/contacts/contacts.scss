@@ -1,0 +1,9 @@
+@import "variables";
+
+#email-form {
+    margin: 1rem $corner-size;
+    transition: all 1s;
+}
+#email-form.up {
+    transform: translateY(-$card-height);
+}

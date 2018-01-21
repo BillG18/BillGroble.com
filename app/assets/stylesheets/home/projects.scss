@@ -1,99 +1,99 @@
-@import "variables";
-@import "animations";
+// @import "variables";
+// @import "animations";
 
-.extinguish-logo {
-    transition: all 0.5s;
-    height: 100px;
-    width: 100vw;
-    overflow: hidden;
-    text-align: center;
-    background-color: $extinguish-brand-primary;
-    img {
-        transition: all 0.5s;
-        height: 100px;
-        margin: auto 0;
-    }
-}
-.extinguish-logo:hover {
-    img {
-    }
-}
-.extinguish-logo.minimize {
-    // overflow: hidden;
-    height: 0px;
-    img {
-        transform: translateY(-100px);
-    }
-}
-.extinguish-background {
-    background-image: asset-url("extinguish_icon.png");
-    background-color: $extinguish-brand-primary;
-    background-size: 50px;
-    width: 100vw;
-    height: 0px;
-    // height: 300px;
-    animation: down-right-diagnol 5s linear normal infinite;
-    margin:0;
-    padding: 0;
-    transition: all 0.5s;
-}
-.extinguish-background.maximize {
-    height: 50vh;
-}
+// .extinguish-logo {
+//     transition: all 0.5s;
+//     height: 100px;
+//     width: 100vw;
+//     overflow: hidden;
+//     text-align: center;
+//     background-color: $extinguish-brand-primary;
+//     img {
+//         transition: all 0.5s;
+//         height: 100px;
+//         margin: auto 0;
+//     }
+// }
+// .extinguish-logo:hover {
+//     img {
+//     }
+// }
+// .extinguish-logo.minimize {
+//     // overflow: hidden;
+//     height: 0px;
+//     img {
+//         transform: translateY(-100px);
+//     }
+// }
+// .extinguish-background {
+//     background-image: asset-url("extinguish_icon.png");
+//     background-color: $extinguish-brand-primary;
+//     background-size: 50px;
+//     width: 100vw;
+//     height: 0px;
+//     // height: 300px;
+//     animation: down-right-diagnol 5s linear normal infinite;
+//     margin:0;
+//     padding: 0;
+//     transition: all 0.5s;
+// }
+// .extinguish-background.maximize {
+//     height: 50vh;
+// }
 
-.extinguish-background.maximize:hover {
-    // -webkit-animation-play-state: paused;
-    // -moz-animation-play-state: paused;
-    // -o-animation-play-state: paused;
-    //  animation-play-state: paused;
-}
+// .extinguish-background.maximize:hover {
+//     // -webkit-animation-play-state: paused;
+//     // -moz-animation-play-state: paused;
+//     // -o-animation-play-state: paused;
+//     //  animation-play-state: paused;
+// }
 
-.snap-match-logo {
-    transition: all 0.5s;
-    height: 100px;
-    width: 100vw;
-    overflow: hidden;
-    text-align: center;
-    background-color:  $snap-brand-primary;
-    img {
-        transition: all 0.5s;
-        height: 100px;
-        margin: auto 0;
-    }
-}
+// .snap-match-logo {
+//     transition: all 0.5s;
+//     height: 100px;
+//     width: 100vw;
+//     overflow: hidden;
+//     text-align: center;
+//     background-color:  $snap-brand-primary;
+//     img {
+//         transition: all 0.5s;
+//         height: 100px;
+//         margin: auto 0;
+//     }
+// }
 
-.snap-match-logo:hover {
-    img {
-        //animation: left-scroll 5s linear normal infinite;
-    }
-}
-.snap-match-logo.minimize {
-    // overflow: hidden;
-    height: 0px;
-    img {
-        transform: translateY(-100px);
-    }
-}
-.snap-match-background {
-    background-image: asset-url("snap_icon.png");
-    background-color: $snap-brand-primary;
-    background-size: 100px;
-    width: 100vw;
-    height: 0px;
-    // height: 300px;
-    animation: down-left-diagnol 5s linear normal infinite;
-    margin:0;
-    padding: 0;
-    transition: all 0.5s;
-}
-.snap-match-background.maximize {
-    height: 50vh;
-}
+// .snap-match-logo:hover {
+//     img {
+//         //animation: left-scroll 5s linear normal infinite;
+//     }
+// }
+// .snap-match-logo.minimize {
+//     // overflow: hidden;
+//     height: 0px;
+//     img {
+//         transform: translateY(-100px);
+//     }
+// }
+// .snap-match-background {
+//     background-image: asset-url("snap_icon.png");
+//     background-color: $snap-brand-primary;
+//     background-size: 100px;
+//     width: 100vw;
+//     height: 0px;
+//     // height: 300px;
+//     animation: down-left-diagnol 5s linear normal infinite;
+//     margin:0;
+//     padding: 0;
+//     transition: all 0.5s;
+// }
+// .snap-match-background.maximize {
+//     height: 50vh;
+// }
 
-.snap-match-background.maximize:hover {
-    // -webkit-animation-play-state: paused;
-    // -moz-animation-play-state: paused;
-    // -o-animation-play-state: paused;
-    // animation-play-state: paused;
-}
+// .snap-match-background.maximize:hover {
+//     // -webkit-animation-play-state: paused;
+//     // -moz-animation-play-state: paused;
+//     // -o-animation-play-state: paused;
+//     // animation-play-state: paused;
+// }
 
