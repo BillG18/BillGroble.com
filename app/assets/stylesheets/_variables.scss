@@ -5,7 +5,7 @@ $brand-accent: #FF822E !default; //#FBBA72
 $brand-accent-2: #FF9E5C !default;
 $light-grey: #CED0CE !default;
 $highlight-color: #FFB98B !default;
-$text-color: #8C8C8C !default;
+$text-color: #666666 !default;
 
 //CARD
 //colors
@@ -14,6 +14,7 @@ $card-accent: #BCBEBC !default; //#E4E4E4
 //dimensions
 $corner-size: 5vw !default;
 $card-height: 20vw !default;
+$card-width: 35vw !default;
 $card-size: calc(#{$card-height} - (2 * #{$corner-size})) !default;
 $card-radius: 0 !default;
 

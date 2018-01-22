@@ -1,2 +1,12 @@
 @import "variables";
 @import "animations";
+
+#intro {
+    margin: 1rem $corner-size;
+    // transition: all 1s;
+}
+#signature {
+    p {
+        color: $brand-primary;
+    }
+}

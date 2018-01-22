@@ -32,6 +32,12 @@
             <div class="corner" id="bottom-left"></div>
             <div class="corner" id="bottom-right"></div>
             
+            <!--<div class="corner-shield" id="top-left"></div>-->
+            <!--<div class="corner-shield" id="top-right"></div>-->
+            <!--<div class="corner-shield" id="bottom-left"></div>-->
+            <!--<div class="corner-shield" id="bottom-right"></div>-->
+            
+            
         </div>
     </div>
 </div>
@@ -101,11 +107,16 @@ $("#email").click(function(){
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
     $("#business-card").addClass("flipY");
+    $("#contact").css("pointer-events", "initial");
     $("#contact").addClass("visible");
+    $("#top-right").addClass("back");
     setTimeout(function() {
         $("#business-card").addClass("expanded");
         $("#shadow").addClass("expanded")
     }, 1000);
+    setTimeout(function() {
+        $("#contact").css("opacity", "1");
+    }, 500);
 });
 
 $("#name").click(function(){
@@ -149,4 +160,18 @@ $("#experience").click(function(){
         $("#experience").removeClass("visible");
     }, 1000);
 });
+
+$("#contact-back").click(function(){
+    $("#business-card").removeClass("expanded");
+    $("#shadow").removeClass("expanded")
+    setTimeout(function() {
+        $("#business-card").removeClass("flipY");
+        $("#contact").css("pointer-events", "none");
+        setTimeout(function() {
+            $("#contact").css("opacity", "0");
+            $("#contact").removeClass("visible");
+        }, 500);
+    }, 1000);
+});
+
 </script>

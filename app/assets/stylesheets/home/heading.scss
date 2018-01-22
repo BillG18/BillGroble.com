@@ -236,10 +236,16 @@
   cursor: not-allowed;
 }
 
+$backX-translate: calc(#{$card-width - $corner-size});
+
 #business-card.flipY {
   transform: rotateY(180deg);
   #card-content {
     visibility: hidden;
+  }
+  #top-left.corner, #top-right.corner, #bottom-left.corner, #bottom-right.corner {
+    pointer-events: none;
+    z-index: -1;
   }
 } 
 #business-card.flipY.expanded {
@@ -250,6 +256,10 @@
   transform: rotateX(180deg);
   #card-content {
     visibility: hidden;
+  }
+  #top-left.corner, #top-right.corner, #bottom-left.corner, #bottom-right.corner {
+    pointer-events: none;
+    z-index: -1;
   }
 } 
 #business-card.flipX-up.expanded {
@@ -285,6 +295,7 @@ $corner-page-size: calc(#{$corner-size} / 2);
     opacity: 1;
   }
 }
+
 $early: calc((2 * #{$corner-page-size}) + 1px);
 $soearly: calc(2 * #{$corner-page-size});
 .corner {
@@ -302,7 +313,7 @@ $soearly: calc(2 * #{$corner-page-size});
   // pointer-events: auto;
   animation: fade-in-corner-page 0.5s ease-in-out 2s;
   animation-fill-mode: forwards;
-  transition: all 1s;
+  transition: all 1s, pointer-events 1ms 1s;
   
   z-index: 2;
 }
@@ -347,6 +358,13 @@ $soearly: calc(2 * #{$corner-page-size});
 // #top-left:hover + #extinguish-background { 
 //   visibility: visible;
 // }
+#top-right.back {
+  
+}
+#top-right.back:hover {
+  transform: rotate3d(-1, 1, 0, 180deg);
+}
+
 #card-content {
     // padding: 2rem;
     transform: translateY(-$corner-size);
@@ -365,6 +383,7 @@ $soearly: calc(2 * #{$corner-page-size});
   padding-bottom: 1vw;
   img {
     width: 6vw;
+    padding-top: 1vw;
     // filter: url(#drop-shadow);
     // -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
     // -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
@@ -401,12 +420,12 @@ $soearly: calc(2 * #{$corner-page-size});
   margin: auto;
   text-align: center;
   // animation-direction: reverse;
-  transition: all 1s ease-in-out, visibility 0ms ease-in-out 0.5s;
+  transition: all 1s ease-in-out, visibility 1ms ease-in-out 0.5s, opacity 1ms ease-in-out;
   // transition: visibility 0ms ease-in-out 0.5s, color 1s ease-in-out; //check firefox and potentially change to 1ms
 }
 #contact.visible {
   visibility: visible;
-  cursor: pointer;
+  // cursor: pointer;
 }
 #contact-form {
   transition: all 1s;
