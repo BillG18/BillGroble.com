@@ -57,7 +57,14 @@
       background-position: 300px -300px
   }
 }
-
+@keyframes up-left-diagnol {
+  0%{
+      background-position: 0 0;
+  }
+  100%{
+      background-position: -300px -300px
+  }
+}
 @keyframes right-scroll {
   0%{
       transform: translateX(0vw);

@@ -5,6 +5,7 @@
         <div id="extinguish-background"></div>
         <div id="snap-background"></div>
         <div id="bill-background"></div>
+        <div id="unknown-background"></div>
         <div id="shadow"></div>
         <div id="business-card">
             <div id="card-content">
@@ -40,22 +41,32 @@
             
         </div>
     </div>
+    <div id="shield"></div>
 </div>
 <script>
 $("#top-left").mouseenter(function(){
     $("#snap-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
+    $("#unknown-background").removeClass("visible");
     $("#extinguish-background").addClass("visible");
 });
 $("#top-right").mouseenter(function(){
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
+    $("#unknown-background").removeClass("visible");
     $("#snap-background").addClass("visible");
 });
 $("#bottom-left").mouseenter(function(){
     $("#snap-background").removeClass("visible");
     $("#extinguish-background").removeClass("visible");
+    $("#unknown-background").removeClass("visible");
     $("#bill-background").addClass("visible");
+});
+$("#bottom-right").mouseenter(function(){
+    $("#snap-background").removeClass("visible");
+    $("#extinguish-background").removeClass("visible");
+    $("#bill-background").removeClass("visible");
+    $("#unknown-background").addClass("visible");
 });
 
 $("#top-left").click(function(){
@@ -99,13 +110,26 @@ $("#bill-background").click(function(){
         $("#business-card").removeClass("exit-right-up");
     }, 1000);
 });
-
+$("#bottom-right").click(function(){
+    $("#business-card").css("transform-origin", "left top");
+    $("#business-card").addClass("exit-left-up");
+    setTimeout(function() {
+        $("#unknown-background.visible").addClass("fullscreen");
+    }, 1000);
+});
+$("#unknown-background").click(function(){
+    $("#unknown-background.visible").removeClass("fullscreen");
+    setTimeout(function() {
+        $("#business-card").removeClass("exit-left-up");
+    }, 1000);
+});
 
 $("#email").click(function(){
     $("#business-card").css("transform-origin", "initial");
     $("#snap-background").removeClass("visible");
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
+    $("#unknown-background").removeClass("visible");
     $("#business-card").addClass("flipY");
     $("#contact").css("pointer-events", "initial");
     $("#contact").addClass("visible");
@@ -124,6 +148,7 @@ $("#name").click(function(){
     $("#snap-background").removeClass("visible");
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
+    $("#unknown-background").removeClass("visible");
     $("#business-card").addClass("flipX-up");
     $("#bio").addClass("visible");
     setTimeout(function() {
@@ -145,6 +170,7 @@ $("#title").click(function(){
     $("#snap-background").removeClass("visible");
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
+    $("#unknown-background").removeClass("visible");
     $("#business-card").addClass("flipX-up");
     $("#experience").addClass("visible");
     setTimeout(function() {
@@ -172,5 +198,9 @@ $("#contact").on('click', "#contact-back", function () {
         }, 500);
     }, 1000);
 });
+
+setTimeout(function() {
+        $("#shield").css("display", "none");
+}, 2500);
 
 </script>
