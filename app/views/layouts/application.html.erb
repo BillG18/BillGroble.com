@@ -6,6 +6,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+  <meta name="description" content="All Things Billy Groble" />
+  <meta property="og:title" content="BillGroble.com" />
+  <meta property="og:description" content="Billy Groble: The Website" />
+  <meta property="og:image" content=<%= asset_path('square_logo.png') %>/>
 </head>
 <body>
 
