@@ -4,3 +4,23 @@
     margin: 1rem $corner-size;
     transition: all 1s;
 }
+#contact-back {
+    transition: all 1s;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    margin-left: $corner-size;
+    // margin-left: 1rem;
+    i {
+        transition: all 1s;
+    }
+}
+#contact-back:hover {
+    color: $brand-primary;
+    cursor: pointer;
+   i {
+        color: $brand-primary;
+        cursor: pointer;
+   }
+    // background-color: $brand-primary;
+}

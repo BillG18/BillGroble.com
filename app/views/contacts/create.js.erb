@@ -7,9 +7,13 @@ setTimeout(function() {
 setTimeout(function(){
     $("#business-card").removeClass("expanded");
     $("#shadow").removeClass("expanded")
-    $("#contact").removeClass("visible");
     setTimeout(function() {
         $("#business-card").removeClass("flipY");
+        $("#contact").css("pointer-events", "none");
+        setTimeout(function() {
+            $("#contact").css("opacity", "0");
+            $("#contact").removeClass("visible");
+        }, 500);
     }, 1000);
 }, 1000);
 
@@ -17,4 +21,5 @@ setTimeout(function(){
     $("#contact-form").removeClass("up");
     $("#sent").removeClass("up");
 }, 5000);
+
 
