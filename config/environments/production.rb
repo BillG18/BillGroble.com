@@ -89,8 +89,8 @@ Rails.application.configure do
     :authentication => :plain,
     :address => "smtp.mailgun.org",
     :port => 587,
-    :domain => "mail.billgroble.com",
-    :user_name => "postmaster@mail.billgroble.com",
+    :domain => "sandboxa4b150b113c0497eb214478e1841a302.mailgun.org",
+    :user_name => "postmaster@sandboxa4b150b113c0497eb214478e1841a302.mailgun.org",
     :password => "mailtime"
   }
 end
