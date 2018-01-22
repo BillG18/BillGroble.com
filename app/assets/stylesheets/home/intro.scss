@@ -2,11 +2,19 @@
 @import "animations";
 
 #intro {
-    margin: 1rem $corner-size;
+    //margin: 1rem $corner-size;
     // transition: all 1s;
 }
+#about-me {
+    margin: 2vh 0;
+    margin-bottom: 1vh;
+}
+#body {
+    text-align: left;
+    margin: 0 1vw;
+}
 #signature {
-    p {
+    h3 {
         color: $brand-primary;
     }
 }
