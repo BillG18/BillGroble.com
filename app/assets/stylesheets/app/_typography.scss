@@ -48,3 +48,18 @@ p {
   //   -moz-background-clip: text;
   //         background-clip: text;
 }
+
+a {
+  link-style: none;
+}
+a:hover {
+  color: $brand-primary;
+}
+
+.icon-caption {
+  font-size: 0.75vw;
+  &:hover {
+    color: $brand-primary;
+  }
+  
+}
