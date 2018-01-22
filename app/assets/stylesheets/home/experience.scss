@@ -1,0 +1,13 @@
+@import "variables";
+
+#resume {
+    i {
+        transition: all 1s;
+    }
+}
+
+#resume:hover {
+    i {
+        color: $brand-primary;
+    }
+}
