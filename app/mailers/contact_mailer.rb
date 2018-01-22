@@ -5,7 +5,7 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.contact_email.subject
   #
-  default from: "postmaster@mail.billgroble.com"
+  default from: "billgroble.com"
   
   def contact_email(content)
     @email = content
