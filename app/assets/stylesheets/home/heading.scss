@@ -8,6 +8,17 @@
     position: relative;
 }
 
+#shield {
+  width: 35vw;
+  height: 20vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 #shadow {
   width: 35vw;
   height: 20vw;
@@ -122,6 +133,38 @@
   cursor: pointer;
   box-shadow: none;
 }
+#unknown-background {
+  background-image: asset-url("unknown_tile.png");
+  background-color: $placeholder-background;
+  background-size: 50px;
+  
+  box-shadow: inset 0 0 10px #000000;
+  
+  visibility: hidden;
+  
+  transition: all 1s, visibility 1ms;
+  animation: up-left-diagnol 5s linear normal infinite;
+    
+  width: 35vw;
+  height: 20vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  //z-index: -1;
+}
+#unknown-background.visible {
+  visibility: visible;
+}
+#unknown-background.visible.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  box-shadow: none;
+}
+
 #business-card {
     background-color: transparent;
     // color: black;
@@ -218,7 +261,10 @@
 #business-card.exit-left {
   transform: translate(-4vw, 4vw) rotate3d(1, 1, 0, 90deg);
 }
-
+#business-card.exit-left-up {
+  transform: translate(-4vw, -4vw) rotate3d(1, -1, 0, 90deg);
+  //slightly darken color?
+}
 #email:hover {
   color: $brand-primary;
   cursor: pointer;
