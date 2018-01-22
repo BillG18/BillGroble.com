@@ -160,8 +160,7 @@ $("#experience").click(function(){
         $("#experience").removeClass("visible");
     }, 1000);
 });
-
-$("#contact-back").click(function(){
+$("#contact").on('click', "#contact-back", function () {
     $("#business-card").removeClass("expanded");
     $("#shadow").removeClass("expanded")
     setTimeout(function() {
