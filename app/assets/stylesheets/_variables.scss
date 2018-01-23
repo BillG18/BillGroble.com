@@ -6,6 +6,7 @@ $brand-accent-2: #FF9E5C !default;
 $light-grey: #CED0CE !default;
 $highlight-color: #FFB98B !default;
 $text-color: #666666 !default;
+$shadow-color: rgba(0,0,0,.15) !default;
 
 //CARD
 //colors
@@ -17,6 +18,11 @@ $card-height: 20vw !default;
 $card-width: 35vw !default;
 $card-size: calc(#{$card-height} - (2 * #{$corner-size})) !default;
 $card-radius: 0 !default;
+$backX-translate: calc(#{$card-width - $corner-size});
+$corner-page-size: calc(#{$corner-size} / 2);
+$initial-corner-size: calc((2 * #{$corner-page-size}) + 1px);
+$folded-corner-size: calc(2 * #{$corner-page-size});
+
 
 //EXTINGUISH
 $extinguish-brand-primary: #9F7CB1 !default;

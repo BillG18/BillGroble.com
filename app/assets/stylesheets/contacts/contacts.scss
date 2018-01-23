@@ -1,7 +1,12 @@
 @import "variables";
+@import "mixins";
+
+#contact-content {
+    @include contentSpacing;
+}
 
 #email-form {
-    margin: 2vh $corner-size;
+    margin: 0 $corner-size;
     transition: all 1s;
 }
 #contact-back {

@@ -13,4 +13,11 @@
  *= require_tree .
  *= require_self
  *= require material_icons
+ *= require nprogress
  */
+
+$nprogress-color: #brand-primary;
+$nprogress-height: 100px;
+$nprogress-zindex: 9;
+
+@import "nprogress";
