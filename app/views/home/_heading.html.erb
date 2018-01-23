@@ -14,9 +14,9 @@
   
                 <h3 id="title">Software Developer</h3>
     
-                <p id="email">bill.groble@gmail.com</p>
+                <div id="email">bill.groble@gmail.com</div>
                 <br />
-                <p id="website">billgroble.com</p>
+                <div id="website">billgroble.com</div>
                 <div id="contact"><div id="contact-form"><%= render template: 'contacts/new' %></div>
                 <div id="sent">
                     <p>Thanks for your message!</p>
@@ -151,7 +151,7 @@ $("#name").click(function(){
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
     $("#unknown-background").removeClass("visible");
-    $("#business-card").addClass("flipX-up");
+    $("#business-card").addClass("flipX");
     $("#bio").addClass("visible");
     setTimeout(function() {
         $("#business-card").addClass("expanded");
@@ -162,7 +162,7 @@ $("#bio").click(function(){
     $("#business-card").removeClass("expanded");
     $("#shadow").removeClass("expanded")
     setTimeout(function() {
-        $("#business-card").removeClass("flipX-up");
+        $("#business-card").removeClass("flipX");
         $("#bio").removeClass("visible");
     }, 1000);
 });
@@ -173,7 +173,7 @@ $("#title").click(function(){
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
     $("#unknown-background").removeClass("visible");
-    $("#business-card").addClass("flipX-up");
+    $("#business-card").addClass("flipX");
     $("#experience").addClass("visible");
     setTimeout(function() {
         $("#business-card").addClass("expanded");
@@ -184,7 +184,7 @@ $("#experience").click(function(){
     $("#business-card").removeClass("expanded");
     $("#shadow").removeClass("expanded")
     setTimeout(function() {
-        $("#business-card").removeClass("flipX-up");
+        $("#business-card").removeClass("flipX");
         $("#experience").removeClass("visible");
     }, 1000);
 });

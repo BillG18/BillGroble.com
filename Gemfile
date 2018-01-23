@@ -26,6 +26,8 @@ gem 'mail_form'
 
 gem 'material_icons'
 
+gem 'nprogress-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

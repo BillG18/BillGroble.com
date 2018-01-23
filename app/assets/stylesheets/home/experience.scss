@@ -1,13 +1,19 @@
 @import "variables";
+@import "mixins";
 
-#resume {
-    i {
-        transition: all 1s;
+#experience-content {
+    @include contentSpacing;
+    #resume {
+        position: absolute;
+        right: 0.5vw;
+        bottom: -0.5vw;
+        i {
+            transition: all 1s;
+        }
     }
-}
-
-#resume:hover {
-    i {
-        color: $brand-primary;
+    &:hover {
+        i {
+            color: $brand-primary;
+        }
     }
 }

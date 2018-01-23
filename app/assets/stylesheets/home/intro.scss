@@ -1,20 +1,17 @@
 @import "variables";
 @import "animations";
+@import "mixins";
 
 #intro {
-    //margin: 1rem $corner-size;
-    // transition: all 1s;
-}
-#about-me {
-    margin: 2vh 0;
-    margin-bottom: 1vh;
-}
-#body {
-    text-align: left;
-    margin: 0 1vw;
-}
-#signature {
-    h3 {
-        color: $brand-primary;
+    @include contentSpacing;
+    #body {
+        text-align: left;
+        margin: 0 1.2vw;
+    }
+    #signature {
+        h3 {
+            color: $brand-primary;
+        }
     }
 }
+

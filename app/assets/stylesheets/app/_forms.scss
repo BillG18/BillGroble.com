@@ -3,40 +3,28 @@
 %form-hint {
   color: red;
 }
-
 .form-inputs {
   .hint {
     @extend %form-hint;
   }
   .error {
-    // @extend %thredded--alert;
-    // @extend %thredded--alert--danger;
-    // display: block;
-    // border-top-left-radius: 0;
-    // border-top-right-radius: 0;
   }
 }
-
 .form-hint {
   @extend %form-hint;
 }
-
-// .form-inputs .input,
-// .form-actions {
-//   margin: 1rem 0;
-// }
-
-// button, input[type="submit"] {
-//   @extend %thredded--button;
-// }
-
-// form {
-//   @extend %thredded--form;
-// }
 input, label {
     display:block;
 }
-
+label {
+    &.required::after {
+        content: "*";
+        color: $brand-primary;
+    }
+    abbr {
+      display: none;
+    }
+}
 input, textarea {
     clear: both;
     width: 100%;
@@ -45,65 +33,38 @@ input, textarea {
     padding: 0.5rem 0.5rem;
     margin: 0.25rem;
     transition: all 0.5s;
-    border: 1px solid;
-    border-radius: 0 5px 0 5px;
+    border: .07vw solid;
+    // border-radius: 0 .125vw 0 .125vw;
+    border-radius: .125vw;
     &:focus {
-        // box-sizing: border-box;
-        border: 1px solid;
 		border-color: $brand-primary;
-// 		border-width: 1px;
   		outline: 0;
-  		// // box-shadow: none;
-  		// -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $brand-primary;
-  		// box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $brand-primary;
-  		box-shadow: 0 0 5px $brand-primary;
+  		box-shadow: 0 0 2px $brand-primary;
     }
 }
 
-// input {
-//   &:focus {
-//       border: 1px solid;
-// 		border-color: $brand-primary;
-// // 		border-width: 1px;
-//   		// outline: 0;
-//   		box-shadow: 0 0 5px $brand-primary;
-//     }
-// }
 textarea {
     height: 30%;
-    //border: 2px solid #ccc;
-    //border-radius: 4px;
     resize: none;
 }
-.hidden { display: none; }
 
 input[type=button], input[type=submit], input[type=reset] {
-    font-weight: 400;
-    transition: all 0.5s;
-    background-color: $brand-accent-2;
+    transition: all .2s;
+    background: none;
     border: none;
-    color: $card-color;
-    // padding: 16px 32px;
-    text-decoration: none;
-    // margin: 4px 2px;
+    color: $text-color;
     cursor: pointer;
-    width: 25%;
-    -webkit-appearance: none;
-    // border-radius: 0 5px 0 5px;
-
-}
-
-input[type=submit]:hover {
-    // color: $brand-primary;
-    background-color: $brand-primary;
-}
-
-label {
-    &.required::after {
-        content: "*";
+    width: 4vw;
+    height: 2.25vw;
+    padding: 0 0.5vw;
+    -webkit-appearance: none; //remove default mobile button styling
+    font-size: 1.2vw;
+    &:hover {
         color: $brand-primary;
     }
-    abbr {
-      display: none;
+    &:focus {
+        color: $brand-primary;
+        background-color: rgba(opacify($brand-accent, 1), 0.4);
+        box-shadow: none;   
     }
 }
