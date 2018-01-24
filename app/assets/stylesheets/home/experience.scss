@@ -3,17 +3,31 @@
 
 #experience-content {
     @include contentSpacing;
-    #resume {
-        position: absolute;
-        right: 0.5vw;
-        bottom: -0.5vw;
-        i {
-            transition: all 1s;
-        }
+}
+ #resume {
+    position: absolute;
+    right: 0.5vw;
+    bottom: 0.5vw;
+    i {
+        transition: all 1s;
     }
     &:hover {
-        i {
-            color: $brand-primary;
-        }
+       i {
+           color: $brand-primary;
+       }
+       .caption {
+           color: $brand-primary;
+       }
     }
+}
+
+.caption {
+    display: block;
+    transition: all 1s;
+}
+
+#experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 1.2vw;
 }
