@@ -209,6 +209,9 @@
   transition: all 1s, pointer-events 1ms 1s;
   z-index: 2;
 }
+.corner.to-back {
+  z-index: -1;
+}
 #top-left {
   top: -$corner-size;
   left: 0;

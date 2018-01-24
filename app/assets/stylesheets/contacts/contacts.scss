@@ -10,22 +10,24 @@
     transition: all 1s;
 }
 #contact-back {
-    transition: all 1s;
+    transition: all 0.5s;
     position: absolute;
-    top: 80%;
-    left: 0;
-    margin-left: $corner-size;
-    // margin-left: 1rem;
+    // height: 10%;
+    top: 40%;
+    left: 1vw;
+    border-radius: 50%;
     i {
         transition: all 1s;
     }
-}
-#contact-back:hover {
-    color: $brand-primary;
-    cursor: pointer;
-   i {
+    &:hover {
         color: $brand-primary;
         cursor: pointer;
-   }
-    // background-color: $brand-primary;
+       i {
+            color: $brand-primary;
+            cursor: pointer;
+          }
+    }
+    &:focus {
+        background-color: rgba(opacify($brand-accent, 1), 0.4);
+    }
 }

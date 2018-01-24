@@ -132,6 +132,7 @@ $("#email").click(function(){
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
     $("#unknown-background").removeClass("visible");
+    $(".corner").addClass("to-back");
     $("#business-card").addClass("flipY");
     $("#contact").css("pointer-events", "initial");
     $("#contact").addClass("visible");
@@ -173,6 +174,7 @@ $("#title").click(function(){
     $("#extinguish-background").removeClass("visible");
     $("#bill-background").removeClass("visible");
     $("#unknown-background").removeClass("visible");
+    $(".corner").addClass("to-back");
     $("#business-card").addClass("flipX");
     $("#experience").addClass("visible");
     setTimeout(function() {
@@ -186,6 +188,9 @@ $("#experience").click(function(){
     setTimeout(function() {
         $("#business-card").removeClass("flipX");
         $("#experience").removeClass("visible");
+        setTimeout(function() {
+            $(".corner").removeClass("to-back");
+        }, 1000);
     }, 1000);
 });
 $("#contact").on('click', "#contact-back", function () {
@@ -198,6 +203,9 @@ $("#contact").on('click', "#contact-back", function () {
             $("#contact").css("opacity", "0");
             $("#contact").removeClass("visible");
         }, 500);
+        setTimeout(function() {
+            $(".corner").removeClass("to-back");
+        }, 1000);
     }, 1000);
 });
 

@@ -23,7 +23,7 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.25vw;
   // background-color: #565656;
   // color: transparent;
@@ -48,16 +48,12 @@ p {
 }
 
 a {
-  link-style: none;
-}
-a:hover {
-  color: $brand-primary;
-}
-
-.icon-caption {
-  font-size: 0.75vw;
+  text-decoration: none;
   &:hover {
     color: $brand-primary;
   }
-  
 }
+.material-icons.md-36 { 
+  font-size: 2.25vw; 
+}
+//(px/16)
