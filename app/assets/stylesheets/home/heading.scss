@@ -188,11 +188,12 @@
 #experience {
   @include initialContentState;
   transform: rotateX(-180deg);
+  
 }
 #experience.visible {
   visibility: visible;
-  cursor: pointer;
 }
+
 
 // Card corners
 .corner {

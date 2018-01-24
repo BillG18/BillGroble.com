@@ -30,4 +30,10 @@
     list-style: none;
     padding: 0;
     margin: 0 1.2vw;
+    li {
+        margin: 1vw 0;
+        h3 {
+            color: $brand-primary;
+        }
+    }
 }
