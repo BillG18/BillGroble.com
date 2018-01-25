@@ -84,6 +84,7 @@
       @include cardEdge;
       transform: rotateX(180deg);
       top: -$corner-size;
+      z-index: -1;
     }
     &:after {
       @include cardEdge;
@@ -209,6 +210,7 @@
   animation-fill-mode: forwards;
   transition: all 1s, pointer-events 1ms 1s;
   z-index: 2;
+  transform-style: preserve-3d;
 }
 .corner.to-back {
   z-index: -1;
@@ -222,6 +224,7 @@
   top: -$corner-size;
   right: 0;
   transform: rotateZ(180deg);
+  // -moz-transform: rotateX(180deg)
 }
 #bottom-left {
   bottom: -$corner-size;
@@ -244,6 +247,7 @@
 }
 #top-right:hover {
   transform: rotate3d(-1, 1, 0, 180deg);
+  //-moz-transform: rotate3d(none) rotateX(-180deg) rotateY(180deg);
 }
 #bottom-left:hover {
   transform: rotate3d(1, 1, 0, 180deg);

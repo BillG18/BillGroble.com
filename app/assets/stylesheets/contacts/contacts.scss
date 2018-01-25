@@ -9,25 +9,4 @@
     margin: 0 $corner-size;
     transition: all 1s;
 }
-#contact-back {
-    transition: all 0.5s;
-    position: absolute;
-    // height: 10%;
-    top: 1vw;
-    left: 1vw;
-    border-radius: 50%;
-    i {
-        transition: all 1s;
-    }
-    &:hover {
-        color: $brand-primary;
-        cursor: pointer;
-       i {
-            color: $brand-primary;
-            cursor: pointer;
-          }
-    }
-    &:focus {
-        background-color: rgba(opacify($brand-accent, 1), 0.4);
-    }
-}
+
