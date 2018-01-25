@@ -32,8 +32,9 @@
     margin: 0 1.2vw;
     li {
         margin: 1vw 0;
+        text-align: left;
         h3 {
-            color: $brand-primary;
+            color: $brand-accent;
         }
     }
 }

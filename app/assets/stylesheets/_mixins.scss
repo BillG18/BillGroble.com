@@ -9,7 +9,7 @@
 @mixin backgroundFullscreen() {
     height: 100vh;
     width: 100vw;
-    cursor: pointer;
+    // cursor: pointer;
     box-shadow: none;
 }
 
@@ -61,11 +61,12 @@
 @mixin hideFront() {
     #card-content {
         visibility: hidden;
-    }
-    #top-left.corner, #top-right.corner, #bottom-left.corner, #bottom-right.corner {
         pointer-events: none;
-        // z-index: -1;
     }
+    // #top-left.corner, #top-right.corner, #bottom-left.corner, #bottom-right.corner {
+    //     pointer-events: none;
+    //     // z-index: -1;
+    // }
 }
 
 @mixin initialContentState() {
@@ -75,6 +76,7 @@
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     margin: auto;
     overflow: hidden;
     visibility: hidden;
@@ -90,5 +92,3 @@
   -webkit-animation-name: $name;
   -webkit-animation-delay: $delay;
 }
-  
-  
