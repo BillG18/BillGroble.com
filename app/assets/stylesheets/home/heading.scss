@@ -76,7 +76,7 @@
     background-color: transparent;
     z-index: 0;
     @include cardSize($corner-size, $card-size);
-    padding: 40vh auto;
+    // padding: 40vh auto;
     transition: all 1s ease-in-out, transform-origin 1ms;
     animation: fade-in 0.5s ease-in-out 2s;
     animation-fill-mode: forwards;
@@ -139,6 +139,7 @@
 #logo {
   padding-top: 2vw;  
   padding-bottom: 1vw;
+  z-index: 5;
   img {
     width: 6vw;
     padding-top: 1vw;
@@ -182,7 +183,6 @@
 }
 #bio.visible {
   visibility: visible;
-  cursor: pointer;
 }
 
 // Resume link
@@ -214,6 +214,7 @@
 }
 .corner.to-back {
   z-index: -1;
+  pointer-events: none;
 }
 #top-left {
   top: -$corner-size;

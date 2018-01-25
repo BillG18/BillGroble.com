@@ -13,9 +13,13 @@ $shadow-color: rgba(0,0,0,.15) !default;
 $card-color: #FAFAFA !default;
 $card-accent: #BCBEBC !default; //#E4E4E4
 //dimensions
+$card-height: 20vw;
+$card-width: 35vw;
+@media only screen and (orientation: portrait) {
+    $card-height: 70vw;
+    $card-width: 40vw;
+}
 $corner-size: 5vw !default;
-$card-height: 20vw !default;
-$card-width: 35vw !default;
 $card-size: calc(#{$card-height} - (2 * #{$corner-size})) !default;
 $card-radius: 0 !default;
 $backX-translate: calc(#{$card-width - $corner-size});

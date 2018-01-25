@@ -2,3 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "variables";
+
+#linkedin-logo {
+    // background: red;
+    z-index: 2;
+    position: absolute; 
+    bottom: 0; 
+    right: 0;
+    #me-presenting {
+        position: absolute;
+        display: none;
+        top:0;
+        bottom:0;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        transition: all 1s;
+    }
+    &:hover ~ .content-container {
+        background-image: asset-url("me-presenting.jpg");
+        background-size: 100vw;
+        #me-presenting {
+            display: none;
+            top:0;
+            bottom:0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+}
+
