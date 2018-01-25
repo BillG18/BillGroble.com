@@ -158,6 +158,9 @@ $("#name").click(function(){
         $("#business-card").addClass("expanded");
         $("#shadow").addClass("expanded")
     }, 1000);
+    setTimeout(function() {
+        $("#bio").css("opacity", "1");
+    }, 500);
 });
 $("#bio").click(function(){
     $("#business-card").removeClass("expanded");
