@@ -80,11 +80,13 @@
     transition: all 1s ease-in-out, transform-origin 1ms;
     animation: fade-in 0.5s ease-in-out 2s;
     animation-fill-mode: forwards;
+    overflow: visible;
     &:before {
       @include cardEdge;
       transform: rotateX(180deg);
+      -webkit-transform: translate3d(0,0,0) rotateX(180deg);
       top: -$corner-size;
-      z-index: -1;
+      // z-index: ;
     }
     &:after {
       @include cardEdge;
@@ -137,12 +139,18 @@
   }
 }
 #logo {
-  padding-top: 2vw;  
-  padding-bottom: 1vw;
+  display: block;
+  left: 0;
+  right: 0;
   z-index: 5;
-  img {
-    width: 6vw;
-    padding-top: 1vw;
+  width: 6vw;
+  height: 6vw;
+  margin: auto;
+  padding-top: 3vw;
+  #billgroble-icon {
+    height: 100%;
+    width: 100%;
+    transform: scaleY(0.72); //make square ad hopefully resolve hairline in "B"
   }
 }
 #email:hover, #name:hover, #title:hover{
