@@ -1,13 +1,19 @@
 
 <div class="main-container">
-    <!--<h1 onClick="document.getElementById('projects').scrollIntoView();" style="position: fixed; top: 0;"/>>Billy</h1> -->
-    <div id="git-logo"></div>
-    <div id="linkedin-logo"><%= inline_svg "linkedin.svg", id: 'linkedin-icon' %><img src=<%= asset_path('me-presenting.jpg') %> alt="me presenting a pretty good powerpoint" id="me-presenting"></div>
     <div class="content-container">
         <div id="heading" class="content-section">
             <%= render 'heading' %>
         </div>
     </div>
-    <div align="center" style="position: absolute; bottom: 0; left:0; right:0; margin-bottom: 1vh;"><p>© 2018 Bill Groble all rights reserved.</p></div>
-
+    <div align="center" id="copyright"><p>© 2018 Bill Groble all rights reserved.</p></div>
+    <%= link_to "https://github.com/BillG18", target: :_blank do %>
+        <div id="git-logo">
+            <%= inline_svg "github_logo.svg", id: 'git-icon' %>
+        </div>
+    <% end %>
+    <%= link_to "https://www.linkedin.com/in/william-groble/", target: :_blank do %>
+        <div id="linkedin-logo">
+            <%= inline_svg "linkedin_logo.svg", id: 'linkedin-icon' %>
+        </div>
+    <% end %>
 </div>
