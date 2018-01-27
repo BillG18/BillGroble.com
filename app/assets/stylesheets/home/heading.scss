@@ -147,10 +147,25 @@
   height: 6vw;
   margin: auto;
   padding-top: 3vw;
+  padding-bottom: 1vw;
   #billgroble-icon {
     height: 100%;
     width: 100%;
-    transform: scaleY(0.72); //make square ad hopefully resolve hairline in "B"
+    #i_full {
+      animation: set_i 1ms, slide_i 0.5s 2s;
+      animation-fill-mode: forwards;
+    }
+    #l_one {
+      animation: set_l_1 1ms, slide_l1 0.5s 2s;
+      animation-fill-mode: forwards;
+    }
+    #l_two {
+      animation: set_l_2 1ms, slide_l2 0.5s 2s;
+      animation-fill-mode: forwards;
+    }
+    #b_full {
+      
+    }
   }
 }
 #email:hover, #name:hover, #title:hover{

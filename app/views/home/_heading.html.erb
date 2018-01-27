@@ -12,7 +12,7 @@
         <div id="shadow"></div>
         <div id="business-card">
             <div id="card-content" align="center">
-                <div id="logo"><%= inline_svg "Personal_logo_7.svg", id: 'billgroble-icon' %></div>
+                <div id="logo"><%= inline_svg "square_logo.svg", id: 'billgroble-icon' %></div>
                 <h2 id="name">Billy Groble</h2>
                 <h3 id="title">Software Developer</h3>
                 <div id="email">bill.groble@gmail.com</div>
@@ -61,4 +61,36 @@
         }, 1000);
     });
     
+    $("#bottom-left").click(function(){
+        $("#business-card").css("transform-origin", "right top");
+        $("#business-card").addClass("exit-right-up");
+        setTimeout(function() {
+            $("#bill-background.visible").addClass("fullscreen");
+            setTimeout(function() {
+                 $("#bill-content").html("<%= escape_javascript(render 'billgroble/billgroble') %>");
+            }, 1000);
+        }, 1000);
+    });
+    
+    $("#top-right").click(function(){
+        $("#business-card").css("transform-origin", "left bottom");
+        $("#business-card").addClass("exit-left");
+        setTimeout(function() {
+            $("#snap-background.visible").addClass("fullscreen");
+            setTimeout(function() {
+                 $("#snap-content").html("<%= escape_javascript(render 'snap_match/snap_match') %>");
+            }, 1000);
+        }, 1000);
+    });
+    
+    $("#top-left").click(function(){
+        $("#business-card").css("transform-origin", "right bottom");
+        $("#business-card").addClass("exit-right");
+        setTimeout(function() {
+            $("#extinguish-background.visible").addClass("fullscreen");
+            setTimeout(function() {
+                 $("#extinguish-content").html("<%= escape_javascript(render 'extinguish/extinguish') %>");
+            }, 1000);
+        }, 1000);
+    });
 </script>

@@ -110,3 +110,45 @@
         transform: scale(0);
     }
 }
+@keyframes set_i {
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes set_l_1 {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes set_l_2 {
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+@keyframes slide_i {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide_l1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide_l2 {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
