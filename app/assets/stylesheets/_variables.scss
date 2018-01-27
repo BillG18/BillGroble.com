@@ -7,6 +7,7 @@ $light-grey: #CED0CE !default;
 $highlight-color: #FFB98B !default;
 $text-color: #666666 !default;
 $shadow-color: rgba(0,0,0,.15) !default;
+$border-color: rgba(opacify($text-color, 1), 0.25) !default;
 
 //CARD
 //colors

@@ -1,0 +1,62 @@
+@import "variables";
+@import "animations";
+
+#phone-shadow {
+    // display: block;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    margin: auto;
+    width: 20vw;
+    height: 42.6vw;
+    border-radius: 3.6vw;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.15);
+}
+
+#phone {
+    display: block;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    margin: auto;
+    width: 20vw;
+}
+
+#phone-icon {
+    width: 100%;
+    height: 100%;
+    fill: $card-color;
+}
+#snap-shot {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    margin: auto;
+    width: 18.5vw;
+    height: 33vw;
+    overflow: hidden;
+    border: thin solid $border-color;
+    // transition: all 1s;
+}
+#screen {
+    opacity: 1;
+    background-color: black;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    margin: auto;
+    width: 18.5vw;
+    height: 33vw;
+    transition: all 0.5s;
+}
+#screen:hover {
+    opacity: 0;
+}
+
+#screenshot-shadow {
+    // opacity: 1;
+    // background-color: black;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    // box-shadow: inset 5px 5px 5px rgba(0,0,0,.15);
+    // transition: all 0.5s;
+}

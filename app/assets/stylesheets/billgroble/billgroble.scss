@@ -1,3 +1,24 @@
 @import "variables";
 @import "animations";
 
+#coming-soon-back.large-back {
+    i {
+        font-size: 3vw;
+    }
+    height: 3vw;
+    position: absolute;
+    margin: auto;
+    background-color: $card-color;
+    // transition: all 0.5s;
+    transform: scale(0);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.15);
+    animation: grow-transition 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#coming-soon-back.shrink {
+    transform: scale(1);
+    animation: shrink-transition .5s;
+    animation-fill-mode: forwards;
+}
