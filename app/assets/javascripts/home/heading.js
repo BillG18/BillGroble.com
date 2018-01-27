@@ -82,6 +82,7 @@ $("#bottom-right").mouseenter(function(){
 $("#extinguish-content").on('click', "#extinguish-back", function () {
     // $("#billgroble-content").addClass("shrink");
     $("#extinguish-back").addClass("shrink");
+    $("#extinguish-pause").addClass("shrink");
     setTimeout(function() {
         $("#extinguish-background.visible").removeClass("fullscreen");
         setTimeout(function() {
@@ -91,9 +92,23 @@ $("#extinguish-content").on('click', "#extinguish-back", function () {
     }, 1000);
 });
 
+$("#extinguish-content").on('click', "#extinguish-pause", function () {
+    if($(this).html() == '<i class="material-icons md-36">pause</i>'){
+        $(this).html('<i class="material-icons md-36">play_arrow</i>');
+    }
+    else{
+        $(this).html('<i class="material-icons md-36">pause</i>');
+    }
+    $("#extinguish-background.visible.fullscreen").toggleClass("paused");
+});
+
 $("#snap-content").on('click', "#snap-back", function () {
     // $("#billgroble-content").addClass("shrink");
     $("#snap-back").addClass("shrink");
+    $("#snap-pause").addClass("shrink");
+    $("#snap-info").addClass("shrink");
+    $("#snap-icons").addClass("shrink");
+    $("#phone").addClass("shrink");
     setTimeout(function() {
         $("#snap-background.visible").removeClass("fullscreen");
         setTimeout(function() {
@@ -103,9 +118,20 @@ $("#snap-content").on('click', "#snap-back", function () {
     }, 1000);
 });
 
+$("#snap-content").on('click', "#snap-pause", function () {
+    if($(this).html() == '<i class="material-icons md-36">pause</i>'){
+        $(this).html('<i class="material-icons md-36">play_arrow</i>');
+    }
+    else{
+        $(this).html('<i class="material-icons md-36">pause</i>');
+    }
+    $("#snap-background.visible.fullscreen").toggleClass("paused");
+});
+
 $("#bill-content").on('click', "#billgroble-back", function () {
     // $("#billgroble-content").addClass("shrink");
     $("#billgroble-back").addClass("shrink");
+    $("#bill-pause").addClass("shrink");
     setTimeout(function() {
         $("#bill-background.visible").removeClass("fullscreen");
         setTimeout(function() {
@@ -115,9 +141,20 @@ $("#bill-content").on('click', "#billgroble-back", function () {
     }, 1000);
 });
 
+$("#bill-content").on('click', "#bill-pause", function () {
+    if($(this).html() == '<i class="material-icons md-36">pause</i>'){
+        $(this).html('<i class="material-icons md-36">play_arrow</i>');
+    }
+    else{
+        $(this).html('<i class="material-icons md-36">pause</i>');
+    }
+    $("#bill-background.visible.fullscreen").toggleClass("paused");
+});
+
 $("#unknown-content").on('click', "#coming-soon-back", function () {
     $("#coming-soon").addClass("shrink");
     $("#coming-soon-back").addClass("shrink");
+    $("#coming-soon-pause").addClass("shrink");
     setTimeout(function() {
         $("#unknown-background.visible").removeClass("fullscreen");
         setTimeout(function() {
@@ -125,6 +162,15 @@ $("#unknown-content").on('click', "#coming-soon-back", function () {
             $("#unknown-content").html("");
         }, 1000);
     }, 1000);
+});
+$("#unknown-content").on('click', "#coming-soon-pause", function () {
+    if($(this).html() == '<i class="material-icons md-36">pause</i>'){
+        $(this).html('<i class="material-icons md-36">play_arrow</i>');
+    }
+    else{
+        $(this).html('<i class="material-icons md-36">pause</i>');
+    }
+    $("#unknown-background.visible.fullscreen").toggleClass("paused");
 });
 
 $("#email").click(function(){

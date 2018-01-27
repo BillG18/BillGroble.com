@@ -1,9 +1,37 @@
 <div id="snap-back" class="back-button button-large"><i class="material-icons md-36">chevron_left</i></div>
+<div id="snap-pause" class="pause-button button-large"><i class="material-icons md-36">pause</i></div>
 <!--<div id="coming-soon-pause" class="pause-button"><i class="material-icons md-36">chevron_left</i></div>-->
 <div align="center" id="snap-content">
-    <div id="phone-shadow"></div>
-    <div id="phone">
-        <%= inline_svg "phone_no_mic.svg", id: 'phone-icon' %>
+
+    <div id="snap-icons">
+        <div id="app-icon">
+            <img src=<%= asset_path('snap_icon.png') %> alt="snap-app-logo">
+        </div>
     </div>
-    <div id="snap-shot"><img src=<%= asset_path('snap-shot.png') %> alt="snap-screenshot" style="width: 18.5vw; box-shadow: inset 5px 5px 5px rgba(0,0,0,.15);"><div id="screenshot-shadow"></div><div id="screen"></div></div>
+    
+    <div id="phone">
+        <div id="phone-shadow"></div>
+        <%= inline_svg "phone_no_mic.svg", id: 'phone-icon' %>
+        <div id="snap-shot"><img src=<%= asset_path('snap-shot.png') %> alt="snap-screenshot" style="width: 18.5vw;">
+            <div id="screenshot-shadow"></div>
+        </div>
+        <div id="screen"></div>
+    </div>
+    
+    <div id="snap-info">
+        <div id="logo-full"><img src=<%= asset_path('snap_logo.png') %> alt="snap-full-logo"></div>
+        <div class="spacer"></div>
+        <div id="description">
+            <p> Snap and Match is an iOS application that's designed to help the 
+                user shop for clothes that match their exisiting wardrobe.</p>
+            <p> The app works by first having the user select the category of 
+                clothing they want output and then prompts the user to either 
+                take a photo or choose an existing photo containing the article they 
+                wasnt to "match". The app then obtains color data from the image and
+                calculates the complementery color which is searched for in the 
+                clothing category initially selected by the user. </p>
+            <p> Snap and Match is written in Swift and Objective C.</p>
+        </div>
+    </div>
+    
 </div>

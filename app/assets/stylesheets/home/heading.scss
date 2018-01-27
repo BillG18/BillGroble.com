@@ -37,6 +37,9 @@
 #extinguish-background.visible.fullscreen {
   @include backgroundFullscreen;
 }
+#extinguish-background.visible.fullscreen.paused {
+  animation-play-state: paused;
+}
 // Snap+Match
 #snap-background {
   @include backgroundLogos("snap_icon.png", $snap-brand-primary, 75px);
@@ -47,6 +50,9 @@
 }
 #snap-background.visible.fullscreen {
   @include backgroundFullscreen;
+}
+#snap-background.visible.fullscreen.paused {
+  animation-play-state: paused;
 }
 // BillGroble
 #bill-background {
@@ -59,6 +65,9 @@
 #bill-background.visible.fullscreen {
   @include backgroundFullscreen;
 }
+#bill-background.visible.fullscreen.paused {
+  animation-play-state: paused;
+}
 // Coming soon
 #unknown-background {
   @include backgroundLogos("unknown_tile.png", $placeholder-background, 50px);
@@ -69,6 +78,9 @@
 }
 #unknown-background.visible.fullscreen {
   @include backgroundFullscreen;
+}
+#unknown-background.visible.fullscreen.paused {
+  animation-play-state: paused;
 }
 
 // Businss card body
