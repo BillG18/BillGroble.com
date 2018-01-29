@@ -8,7 +8,17 @@
     bottom: 50%;
     left: 0;
     right: 0;
-    background-color: $card-color;
+    // background-color: $card-color;
+    color: $card-color;
+    font-weight: 600;
+    background: repeating-linear-gradient(
+        45deg,
+        #FFD25A,
+        #FFD25A 5vw,
+        #191919 5vw,
+        #191919 10vw
+    );
+    text-shadow: .2vw 0 black;
     // transition: all 0.5s;
     font-size: 3vw;
     transform: scale(0);

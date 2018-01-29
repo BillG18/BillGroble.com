@@ -62,6 +62,7 @@
 }
 
 #screen {
+    // transform: scale(0);
     opacity: 1;
     background-color: black;
     position: absolute;
@@ -118,13 +119,16 @@
 }
 #description {
     width: 30vw;
-    height: 15vw;
+    // height: 15vw;
     padding: 1vw;
     box-shadow: 5px 5px 5px rgba(0,0,0,.15);
     background-color: $card-color;
     text-align: left;
     margin: auto;
-    font-weight: 500;
+    // font-weight: 500;
+    p {
+        font-size: 1.2vw;
+    }
 }
 
 #snap-icons {

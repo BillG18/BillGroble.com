@@ -2,5 +2,21 @@
 <div id="extinguish-pause" class="pause-button button-large"><i class="material-icons md-36">pause</i></div>
 <!--<div id="coming-soon-pause" class="pause-button"><i class="material-icons md-36">chevron_left</i></div>-->
 <div align="center" id="extinguish-partial-content">
-
+    <div id="icons">
+        <div id="extinguish-icon">
+            <img src=<%= asset_path('extinguish-touch-icon.png') %> alt="extinguish-screenshot">
+        </div>
+    </div>
+    <div id="details">
+        <div id="full-logo" class="extinguish-card" align="center">
+            <%= inline_svg "extinguish-full-logo.svg", id: 'extinguish-full-logo' %>
+        </div>
+        <div class="spacer"></div>
+        <div id="description" class="extinguish-card">
+        Extinguish is a support network committed to ending domestic violence and marginalization by extinguishing gaslights one case at a time.
+        The site includes forums (powered by <a href="https://thredded.org/">thredded</a>) where users names are anonymized depending on the topic they post in as well as a 
+        database of user submitted advice (or "tips" as they are refferred to in-app) organized by category and subcategory that can be browsed or queried by keyword.
+        Extinguish wass built using Ruby on Rails and is currently in the process of becoming a registered nonprofit.
+        </div>
+    </div>
 </div>
