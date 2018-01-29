@@ -2,9 +2,10 @@
 <div id="bill-pause" class="pause-button button-large"><i class="material-icons md-36">pause</i></div>
 <!--<div id="coming-soon-pause" class="pause-button"><i class="material-icons md-36">chevron_left</i></div>-->
 <div align="center" id="billgroble-content">
+    <div id="bill-logo">
+        <img src=<%= asset_path('square_logo.png') %> alt="'Bill' logo">
+    </div>
     <div id="bill-info">
-        <div id="logo-full"><h1>BillGroble.com</h1></div>
-        <div class="spacer"></div>
         <div id="description" class="bill-card">
             <p> I first started this website in fall 2017 to test various Ruby
                 on Rails code snippets I had been working on for other projects.
@@ -15,12 +16,14 @@
                 button is in the upper-right.)</p>
         </div>
         <div class="spacer"></div>
-        <div class="bill-card">
+        <div id="rails" class="bill-card">
              <p> billgroble.com is powered by Ruby on Rails.</p>
         </div>
         <div class="spacer"></div>
-        <div class="bill-card">
-            <a href="url">Check out the site code on github</a>
+    </div>
+    <div id="extinguish-github">
+        <div id="git-bill" align="center">
+            <%= inline_svg "github-logo.svg", id: 'bill-git-logo' %>
         </div>
     </div>
 </div>

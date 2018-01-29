@@ -6,7 +6,7 @@
     // height: 15vw;
     padding: 1vw;
     box-shadow: 5px 5px 5px rgba(0,0,0,.15);
-    background-color: $card-color;
+    background-color: $extinguish-background;
     text-align: left;
     margin: auto;
     // font-weight: 500;
@@ -20,11 +20,23 @@
     animation: grow-transition .5s;
     animation-fill-mode: forwards;
     position: absolute;
-    bottom: 0; left: 0; right: 0; top: 0;
+    bottom: 50%; left: 0; right: 0;
     margin: auto;
-    width: 30vw;
+    width: 60vw;
     height: 20vw;
     background: none;
+    #description {
+        width: 40vw;
+        font-size: 1.5vw;
+        a {
+            font-size: 1.5vw;
+        }
+    }
+    #rails {
+        width: 40vw;
+        font-size: 1.5vw;
+        text-align: center;
+    }
 }
 
 #details.shrink {
@@ -36,38 +48,92 @@
 }
 
 #full-logo {
-    width: 40vw;
+    width: 60vw;
     position: center;
     #extinguish-full-logo {
         width: 100%;
         height: 100%;
+        fill: $extinguish-black;
+        #flame {
+            // opacity: 0;
+            fill: $extinguish-brand-primary;
+            // animation: fade-in-text 3s ease 1.5s alternate infinite;
+            // animation-fill-mode: forwards;
+            // opacity: 1;
+        }
+        .smoke {
+            // opacity: 0;
+            // fill: $extinguish-brand-primary;
+            // animation: fade-in-text 3s ease 2s alternate infinite;
+            // animation-fill-mode: forwards;
+        }  
     }
 }
+
 
 #icons {
     animation: grow-transition .5s;
     animation-fill-mode: forwards;
-    left: 15%; top: 0; bottom: 0;
+    left: 10%; top: 50%;
     width: 14vw;
     height: 14vw;
     padding: 0;
     position: absolute;
     
     margin: auto;
-    #extinguish-icon {
-        padding: 0;
-        // wi
-    }
-    img {
-        padding: 0;
-        width: 14vw;
-        height: 14vw;
+    #extinguish-logo {
+        width: 12vw;
+        height: 12vw;
+        padding: 1vw;
         border-radius: 3vw;
         box-shadow: 5px 5px 5px rgba(0,0,0,.15);
+        // background-colo
+        #extinguish-icon {
+            width: 100%;
+            height: 100%;
+            transition: all .5s;
+            fill: $extinguish-black;
+            &:hover {
+                cursor: pointer;
+                fill: $extinguish-brand-primary;
+            }
+        }
     }
 }
 
 #icons.shrink {
+    // background-color: red;
+    transform: scale(1);
+    animation: shrink-transition .5s .5s; 
+    // animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+#git-extinguish {
+    padding: 1vw;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 3vw;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.15);
+    right: 10%; top: 50%;
+    position: absolute;
+    margin: auto;
+    transition: all .5s;
+    animation: grow-transition .5s;
+    animation-fill-mode: forwards;
+    #extinguish-git-logo {
+        fill: $extinguish-black;
+        transition: all .5s;
+        width: 100%;
+        height: 100%;
+        &:hover {
+            cursor: pointer;
+            fill: $extinguish-brand-primary;
+        }
+    }
+}
+
+#git-extinguish.shrink {
     // background-color: red;
     transform: scale(1);
     animation: shrink-transition .5s .5s; 

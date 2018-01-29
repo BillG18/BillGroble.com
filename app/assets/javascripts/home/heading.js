@@ -86,6 +86,7 @@ $("#extinguish-content").on('click', "#extinguish-back", function () {
     $("#details").addClass("shrink");
     $("#icons").addClass("shrink");
     $("#extinguish-pause").addClass("shrink");
+    $("#git-extinguish").addClass("shrink");
     setTimeout(function() {
         $("#extinguish-background.visible").removeClass("fullscreen");
         setTimeout(function() {
@@ -136,6 +137,7 @@ $("#bill-content").on('click', "#billgroble-back", function () {
     $("#billgroble-back").addClass("shrink");
     $("#bill-pause").addClass("shrink");
     $("#bill-info").addClass("shrink");
+    $("#bill-logo").addClass("shrink");
     setTimeout(function() {
         $("#bill-background.visible").removeClass("fullscreen");
         setTimeout(function() {
