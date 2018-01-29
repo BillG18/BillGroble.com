@@ -83,6 +83,9 @@ $("#extinguish-content").on('click', "#extinguish-back", function () {
     // $("#billgroble-content").addClass("shrink");
     $("#extinguish-back").addClass("shrink");
     $("#extinguish-pause").addClass("shrink");
+    $("#details").addClass("shrink");
+    $("#icons").addClass("shrink");
+    $("#extinguish-pause").addClass("shrink");
     setTimeout(function() {
         $("#extinguish-background.visible").removeClass("fullscreen");
         setTimeout(function() {
@@ -132,6 +135,7 @@ $("#bill-content").on('click', "#billgroble-back", function () {
     // $("#billgroble-content").addClass("shrink");
     $("#billgroble-back").addClass("shrink");
     $("#bill-pause").addClass("shrink");
+    $("#bill-info").addClass("shrink");
     setTimeout(function() {
         $("#bill-background.visible").removeClass("fullscreen");
         setTimeout(function() {
