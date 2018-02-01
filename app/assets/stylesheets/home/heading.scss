@@ -100,7 +100,7 @@
       // border-radius: 0 0 $card-radius 0; border-width: $corner-size $corner-size 0 $corner-size;
       // position: relative;
       // padding: 0 $before-width;
-      transform: scaleX(-1);
+      transform: scaleY(-1);
       // -webkit-transform: rotateX(180deg);
       top: -$corner-size;
       // z-index: -1;
