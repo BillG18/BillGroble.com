@@ -93,12 +93,17 @@
     animation: fade-in 0.5s ease-in-out 2s;
     animation-fill-mode: forwards;
     overflow: visible;
+    -webkit-transform: translate3d(0,0,0);
     &:before {
+      $before-width:  calc(#{$card-width} - (#{$corner-size}));
       @include cardEdge;
+      // border-radius: 0 0 $card-radius 0; border-width: $corner-size $corner-size 0 $corner-size;
+      // position: relative;
+      // padding: 0 $before-width;
       transform: rotateX(180deg);
-      -webkit-transform: translate3d(0,0,0) rotateX(180deg);
+      // -webkit-transform: rotateX(180deg);
       top: -$corner-size;
-      // z-index: ;
+      // z-index: -1;
     }
     &:after {
       @include cardEdge;
@@ -192,7 +197,8 @@
 // Contact link
 #contact {
   @include initialContentState;
-  transform: rotateY(180deg);
+  // transform: rotateY(180deg);
+  transform: scaleX(-1);
 }
 #contact.visible {
   visibility: visible;
@@ -214,7 +220,8 @@
 // About me link
 #bio {
   @include initialContentState;
-  transform: rotateX(180deg);
+  // transform: rotateX(180deg);
+  transform: scaleY(-1);
 }
 #bio.visible {
   visibility: visible;
@@ -223,7 +230,8 @@
 // Resume link
 #experience {
   @include initialContentState;
-  transform: rotateX(-180deg);
+  // transform: rotateX(-180deg);
+  transform: scaleY(-1);
   
 }
 #experience.visible {
