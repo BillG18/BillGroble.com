@@ -153,6 +153,12 @@
   animation-fill-mode: forwards;
   #email, #name, #title {
     transition: color 0.5s ease-in-out;
+    width: 15vw;
+    margin: auto;
+    &:hover {
+      color: $brand-primary;
+      cursor: pointer;
+    }
   }
 }
 #logo {
@@ -181,17 +187,17 @@
       animation-fill-mode: forwards;
     }
     #b_full {
-      
+      //left empty to show path id name
     }
   }
 }
-#email:hover, #name:hover, #title:hover{
-  color: $brand-primary;
-  cursor: pointer;
-}
-#website:hover {
-  animation: swing 1s;
-  cursor: not-allowed;
+#website {
+  width: 15vw;
+  margin: auto; 
+  &:hover {
+    animation: swing 1s;
+    cursor: not-allowed;
+  }
 }
 
 // Contact link
