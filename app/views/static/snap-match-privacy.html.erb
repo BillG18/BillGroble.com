@@ -116,8 +116,11 @@
         /*color:black;*/
         background: none;
     }
-    li{
-        /*list-style:none;*/
+    ::selection {
+        background: #66ccff; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+        background: #66ccff; /* Gecko Browsers */
     }
     @media only screen and (max-width: 700px) {
         #privacy-body{
